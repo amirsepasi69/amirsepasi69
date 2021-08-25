@@ -23,7 +23,7 @@ exports.getStudyGroups = () => {
         return;
       }
       const studyGroupsList = rows.map((e) => {
-        const studyGroupsJson = { id: e.id, name: e.name };
+        const studyGroupsJson = { id: e.id, name: e.name, sg_code: e.sg_code };
         return studyGroupsJson;
       });
       resolve(studyGroupsList);

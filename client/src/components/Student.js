@@ -50,7 +50,7 @@ const Student = (props) => {
           {courses.map((course) => (
             <Grid item xs={12} sm={6} md={3} spacing={5} className="abc">
               <span className="abc">
-            <SingleCourse  course={course} />
+            <SingleCourse props={props} course={course} />
             </span>
                 
             </Grid>

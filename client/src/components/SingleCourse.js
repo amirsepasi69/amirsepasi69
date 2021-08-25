@@ -17,11 +17,19 @@ import Fade from "@material-ui/core/Fade";
 // import YouTubeIcon from "@material-ui/icons/YouTube";
 import "./modal.css";
 import { Link } from "react-router-dom";
-import SingleStudyGroup from "./SingleStudyGroup";
+import StudyGroupStatus from "./StudyGroupStatus";
 // import Book from "../Book";
 
 
 const useStyles = makeStyles((theme) => ({
+  modalStyle1:{
+    position:'absolute',
+    top:'10%',
+    left:'10%',
+    overflow:'scroll',
+    height:'100%',
+    display:'block'
+  },
   root: {
     width: 300,
   },
@@ -42,6 +50,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    // top:'30%',
+    // left:'10%',
+    overflow:'scroll',
+    // height:'100%',
+    // display:'block'
   },
   paper: {
     width: "90%",
@@ -89,7 +102,7 @@ const SingleCourse = (props) => {
             title=""
           /> */}
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h5" component="h2" >
              <b> {props.course.name}</b>
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
@@ -148,7 +161,7 @@ const SingleCourse = (props) => {
 
             
 
-              <div className="ContentModal__about">
+              <div className="ContentModal__about" style={{marginTop:"200px"}}>
                 <span style={{marginTop:'25px'}} className="ContentModal__title">
                   {props.course.name} - {props.course.code}
                  
@@ -170,7 +183,7 @@ const SingleCourse = (props) => {
                  Destination:<span style={{marginLeft:'15px',color: 'white', backgroundColor:'red', border: '3px black solid', padding: '3px'}}><i>{flight.arrival}</i></span>
                   </div>
                   </div> */}
-                 <SingleStudyGroup />
+                 <StudyGroupStatus props={props} code={props.course.code}/>
                   
                 </span>
 
