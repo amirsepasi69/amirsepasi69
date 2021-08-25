@@ -20,9 +20,10 @@ router.get('/:id', function(req, res, next) {
 router.post('/', function (req,res, next){
     // let data = JSON.stringify(req.body);
     let data = req.body.name;
-    console.log("data:", req.body.name);
+    let data2 = req.body.sg_code;
+    console.log("data:", req.body.name, req.body.sg_code);
     daoMain
-    .addStudyGroup(data)
+    .addStudyGroup(data, data2)
     .then(() => {res.end(); ;
         console.log("Study Group name Created");})
     .catch((err) => {res.status(500).end(); console.log(err)});

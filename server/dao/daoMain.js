@@ -4,6 +4,7 @@
 const sqlite = require("sqlite3");
 
 const db = new sqlite.Database("./db/main.db", (err) => {
+  db.get("PRAGMA foreign_keys = ON");
   if (err) {
     throw err;
   } else {
@@ -60,10 +61,10 @@ exports.deleteStudyGroups = () => {
   });
 };
 
-exports.addStudyGroup = (name) => {
+exports.addStudyGroup = (name, sg_code) => {
   return new Promise((resolve, reject) => {
-    const sql = "INSERT INTO studygroups (name) VALUES (?)";
-    db.run(sql, [name], function (err) {
+    const sql = "INSERT INTO studygroups (name, sg_code) VALUES (?, ?)";
+    db.run(sql, [name, sg_code], function (err) {
       if (err) {
         return console.error(err.message);
       }

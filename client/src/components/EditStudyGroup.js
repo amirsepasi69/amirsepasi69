@@ -2,10 +2,13 @@ import React from "react";
 import { Grid, TextField, Button } from "@material-ui/core";
 import axios from "axios";
 import courseService from "../services/CoursesService";
+import studyGroupService from "../services/StudyGroupsService";
 // import Auth from "../auth/Auth";
 
 const EditStudyGroup = (props) => {
+  console.log("editStudyGroups Props", props);
   const [name, setName] = React.useState("");
+  const [sg_code, setSg_code] = React.useState("");
 
  
   return (
@@ -27,9 +30,22 @@ const EditStudyGroup = (props) => {
               setName(e.target.value);
             }}
           />
-         
+           <TextField
+          
+          label="sg_code"
+          fullWidth
+          value={sg_code}
+          onChange={(e) => {
+            setSg_code(e.target.value);
+          }}
+        />
+       
         
         </Grid>
+      
+        
+        
+        
         <Grid item xs={3}></Grid>
         <Grid item xs={3}></Grid>
         <Grid item xs={9} >
@@ -38,12 +54,12 @@ const EditStudyGroup = (props) => {
             variant="contained"
             
             onClick={(e) => {
-              courseService
-                .addFlight({ name })
+              studyGroupService
+                .addStudyGroup({ name, sg_code })
                 .then((data) => {
-                //   console.log("Consoling New FLight data")
-                //   console.log(data);
-                  props.history.push("/");
+                  console.log("Consoling New Study Group data")
+                  console.log(data);
+                  // props.history.push("/");
                 })
                 .catch((err) => {
                   console.log(err);
