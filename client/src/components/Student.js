@@ -28,9 +28,9 @@ const Student = (props) => {
 
     return ( 
    <>
-        <h1>Student Page</h1>
+        <h1 style={{textAlign:"center"}}>Student Page</h1>
         <h4>
-        <h2>Course: Course Name  Credits </h2>
+        <h2 style={{textAlign:"center"}}>All Courses </h2>
         {/* {courses.map((course, index) => (
           <SingleStudyGroup course={course} />
         

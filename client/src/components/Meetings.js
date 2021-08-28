@@ -1,7 +1,7 @@
 import meetingService from "../services/MeetingsService";
 import React, { useState } from "react";
 
-const Meetings = () => {
+const Meetings = ({props}) => {
 
     const [meetings, setMeetings] = useState([]);
 
@@ -24,7 +24,10 @@ const Meetings = () => {
 
     return (  
         <>
-        <h1>Meetings</h1>
+        <div style={{textAlign:"center"}}>
+        <h1>Meetings of Study Group : {props} </h1>
+        </div>
+       
         </>
     );
 }

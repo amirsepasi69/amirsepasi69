@@ -161,7 +161,7 @@ const SingleCourse = (props) => {
 
             
 
-              <div className="ContentModal__about" style={{marginTop:"20px"}}>
+              <div className="ContentModal__about" style={{marginTop:"15px"}}>
                 <span style={{marginTop:'25px'}} className="ContentModal__title">
                   {props.course.name} - {props.course.code}
                  

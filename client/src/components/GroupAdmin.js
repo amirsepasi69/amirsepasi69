@@ -28,9 +28,9 @@ const GroupAdmin = (props) => {
 
     return ( 
    <>
-        <h1>Group Admin Page</h1>
+        <h1 style={{textAlign:"center"}}>Group Admin Page</h1>
       
-        <h2>Course: Course Name  Credits </h2>
+        <h2 style={{textAlign:"center"}}>All Courses </h2>
         {/* {courses.map((course, index) => (
           <SingleStudyGroup course={course} />
         

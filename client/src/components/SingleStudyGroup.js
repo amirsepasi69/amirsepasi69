@@ -14,8 +14,8 @@ const { state:{code}, dispatch } = DataState();
     // console.log("Props of Single STudy Group: ", props);
     return (
         <>
-        <h1> {fcode} </h1>
-        <Meetings />
+        {/* <h1> {fcode} </h1> */}
+        <Meetings props={fcode}/>
         </>
       );
 }

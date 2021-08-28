@@ -5,6 +5,7 @@ const Home = () => {
 
     return (  
         <>
+        <div style={{textAlign:"center"}}> 
         <h1>Welcome to Home Page</h1>
         <Link to="/student">
           <button style={{marginLeft:"50px", padding: "15px"}}>
@@ -17,7 +18,7 @@ const Home = () => {
           Go As a Group Admin
           </button>
           </Link>
-
+</div>
 
        
         </>

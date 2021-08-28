@@ -35,10 +35,10 @@ const StudyGroupStatus = ({ code }) => {
     arr2 = studyGroups.map((studygroup) => studygroup.sg_code);
 
     if (arr2.includes(code) == true) {
-      return <h1>Group exists with code: {code}</h1>;
+      return <h2 style={{textAlign:"center"}}>Study Group exists with course: {code} 🎉</h2>;
     }
 
-    return <h1>No group exists</h1>;
+    return <h2 style={{textAlign:"center"}}>No Study Group exists with this course 😐</h2>;
   };
 
   displaysg();
@@ -49,20 +49,24 @@ const StudyGroupStatus = ({ code }) => {
 
   return (
     <>
-      <h2>Name: Code </h2>
+      {/* <h2>Name: Code </h2> */}
 
       {displaysg()}
       <Link to="/singlestudygroup">
-        <button
-          onClick={() =>
-            dispatch({
-              type: "ADD_TO_CODE",
-              payload: code,
-            })
-          }
-        >
-          Go to the Group
-        </button>
+        {arr2.includes(code) && 
+         <button
+         style={{padding: "10px", marginLeft:"18rem", backgroundColor:"lawngreen", color:""}}
+           onClick={() =>
+             dispatch({
+               type: "ADD_TO_CODE",
+               payload: code,
+             })
+           }
+         >
+           Go to the Group
+         </button>
+        }
+       
       </Link>
 
       {/* <SingleStudyGroup props={code} /> */}
