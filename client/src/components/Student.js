@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import courseService from "../services/CoursesService";
 import SingleCourse from "../components/SingleCourse";
-import { Grid, Button } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 const Student = (props) => {
     const [courses, setCourses] = useState([]);
@@ -31,12 +31,6 @@ const Student = (props) => {
         <h1 style={{textAlign:"center"}}>Student Page</h1>
         <h4>
         <h2 style={{textAlign:"center"}}>All Courses </h2>
-        {/* {courses.map((course, index) => (
-          <SingleStudyGroup course={course} />
-        
-        // <h3>{course.id}: {course.name}  {course.credits} {index}</h3>
-        ))} */}
-        {/* <button onClick={(e)=>{props.history.push("/singlecourse")}} > click</button> */}
 
         <Grid
             container

@@ -9,7 +9,7 @@ class MeetingsService extends GenericService {
   
   // updateFlight = (_id, data) => this.put("flights/" + _id, data);
   getMeetings = () => this.get("meetings");
-  getOneMeeting = (id) => this.get("meetings" + id);
+  getOneMeeting = (code) => this.get("meetings/" + code);
 }
 
 let meetingService = new MeetingsService();

@@ -8,13 +8,8 @@ const SingleStudyGroup = (props) => {
 const { state:{code}, dispatch } = DataState();
 
     let fcode = code;
-
-    
-
-    // console.log("Props of Single STudy Group: ", props);
     return (
         <>
-        {/* <h1> {fcode} </h1> */}
         <Meetings props={fcode}/>
         </>
       );

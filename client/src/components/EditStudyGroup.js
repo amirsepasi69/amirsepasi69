@@ -3,7 +3,6 @@ import { Grid, TextField, Button } from "@material-ui/core";
 import axios from "axios";
 import courseService from "../services/CoursesService";
 import studyGroupService from "../services/StudyGroupsService";
-// import Auth from "../auth/Auth";
 
 const EditStudyGroup = (props) => {
   console.log("editStudyGroups Props", props);

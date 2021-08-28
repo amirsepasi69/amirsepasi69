@@ -13,6 +13,7 @@ import {
 import SingleCourse from "./components/SingleCourse";
 import SingleStudyGroup from "./components/SingleStudyGroup";
 import Home from "./components/Home";
+import MeetingSignup from './components/MeetingSignup';
 
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
      <Route path="/groupadmin" component={GroupAdmin} />
      <Route path="/editstudygroup" component={EditStudyGroup} />
      <Route path="/singlestudygroup" component={SingleStudyGroup} />
+     <Route path="/meetingsignup" component={MeetingSignup} />
+     <Route path="/generaladmin" component={GeneralAdmin} />
      </Switch>
      </Router>
      

@@ -19,6 +19,21 @@ export const dataReducer = (state, action)  => {
                 return {
                     code:[action.payload]
                 }
+
+                case "ADD_TO_MEETINGID":
+                    console.log("ADD_TO_MEETINGID Reducer activated");
+                    // console.log("state", state);
+                    console.log("Action payload of meeting id", action.payload);
+        
+                    // localStorage.setItem("fkey", action.payload);
+        
+                    
+        
+                        return {
+                            // meetingID:[...state.meetingID, action.payload],
+                             meetingID:[state.meetingID, action.payload],
+                            match: action.payload
+                        }
             
         default:
             return state;

@@ -9,11 +9,14 @@ const Context = ({ children }) => {
     const msg = [];
 
     let code="";
+
+    let meetingID=[""];
     // code = localStorage.getItem("fkey");
 
     const [state, dispatch] = useReducer(dataReducer, { 
         msg: ["Salamt Pagi"],
-        code : code
+        code : code,
+        meetingID: meetingID,
     });
     // console.log("msg:", msg);
 

@@ -455,10 +455,10 @@ exports.getMeetings = () => {
   });
 };
 
-exports.getOneMeeting = (id) => {
+exports.getOneMeeting = (code) => {
   return new Promise((resolve, reject) => {
-    const sql = "SELECT * from meetings where id = (?)";
-    db.all(sql, [id], (err, rows) => {
+    const sql = "SELECT * from meetings where code = (?)";
+    db.all(sql, [code], (err, rows) => {
       if (err) {
         reject(err);
         return;

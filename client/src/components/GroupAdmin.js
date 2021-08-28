@@ -12,16 +12,13 @@ const GroupAdmin = (props) => {
           .then((data) => {
             let data2 = [...data]
             setCourses(data2);
-            // console.log("data2: ", data2);
-            
           })
           .catch((err) => {
             console.log(err);
           });
       };    
-      // getData();
+
       React.useEffect(getData, []);
-      // console.log("courses: ", courses);
 
      
 
@@ -31,13 +28,6 @@ const GroupAdmin = (props) => {
         <h1 style={{textAlign:"center"}}>Group Admin Page</h1>
       
         <h2 style={{textAlign:"center"}}>All Courses </h2>
-        {/* {courses.map((course, index) => (
-          <SingleStudyGroup course={course} />
-        
-        // <h3>{course.id}: {course.name}  {course.credits} {index}</h3>
-        ))} */}
-        {/* <button onClick={(e)=>{props.history.push("/singlecourse")}} > click</button> */}
-
         <Grid
             container
             spacing={3}

@@ -9,8 +9,8 @@ router.get('/', function(req, res, next) {
     .then((meetingsList) => res.json(meetingsList))
 });
 
-router.get('/:id', function(req, res, next) {
-    daoMain.getOneMeeting(req.params.id)
+router.get('/:code', function(req, res, next) {
+    daoMain.getOneMeeting(req.params.code)
     .then((meetingsList) => res.json(meetingsList))
     .catch((err) =>{ res.status(500).end(); console.log(err)});
 });
