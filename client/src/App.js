@@ -12,6 +12,7 @@ import {
 
 import SingleCourse from "./components/SingleCourse";
 import SingleStudyGroup from "./components/SingleStudyGroup";
+import Home from "./components/Home";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
   
     <Router>
     <Switch>
+     <Route path="/" component={Home} exact/>
      <Route path="/Student" component={Student}/>
      <Route path="/singlecourse" component={SingleCourse} />
      <Route path="/groupadmin" component={GroupAdmin} />
